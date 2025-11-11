@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Weather Now</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Weather Now</h1>
+      <p class="tagline">Current weather for your location or any city you enter.</p>
+    </header>
+
+    <main>
+      <div class="controls">
+        <button id="use-location">Use my location</button>
+        <div class="or">— OR —</div>
+        <form id="city-form">
+          <input id="city-input" placeholder="Enter city (e.g. Mumbai)" />
+          <button type="submit">Search</button>
+        </form>
+      </div>
+
+      <section id="weather-card" class="card hidden">
+        <div class="top">
+          <img id="weather-icon" alt="weather icon" />
+          <div>
+            <h2 id="location-name"></h2>
+            <p id="weather-desc" class="muted"></p>
+          </div>
+        </div>
+
+        <div class="details">
+          <div class="temp">
+            <span id="temp-value"></span><span class="unit">°C</span>
+          </div>
+          <div class="meta">
+            <div>Feels like: <span id="feels-like"></span>°C</div>
+            <div>Humidity: <span id="humidity"></span>%</div>
+            <div>Wind: <span id="wind"></span> m/s</div>
+            <div>Sunrise: <span id="sunrise"></span></div>
+            <div>Sunset: <span id="sunset"></span></div>
+          </div>
+        </div>
+
+        <div id="attribution" class="muted small">Data provided by OpenWeatherMap</div>
+      </section>
+
+      <div id="message" class="muted"></div>
+    </main>
+
+    <footer>
+      <p>Built with JavaScript • Replace <code>YOUR_API_KEY</code> in <code>app.js</code> with your OpenWeatherMap API key.</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
